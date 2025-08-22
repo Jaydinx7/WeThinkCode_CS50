@@ -11,7 +11,8 @@ except ValueError:
     sys.exit("Command-line argument is not a number")
 
 try:
-    responce = requests.get("https://rest.coincap.io/v3/assets?apiKey=309b5aa86b7899b44a0a83540533221403a334b717003d68d6d58949362345c6")
+    responce = requests.get(
+        "https://rest.coincap.io/v3/assets?apiKey=309b5aa86b7899b44a0a83540533221403a334b717003d68d6d58949362345c6")
     x = responce.json()
 
     for crypto in x["data"]:
@@ -20,7 +21,6 @@ try:
             price = usd * amount
             print(f"${price:,.4f}")
             break
-
 
 
 except requests.RequestException:
