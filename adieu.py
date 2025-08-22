@@ -7,7 +7,7 @@ try:
     while True:
         name = input("Name: ")
         names.append(name)
-        
-except EOFError:
+
+except (EOFError):
     adieu = p.join(names)
     print("\nAdieu, adieu, to", adieu)
